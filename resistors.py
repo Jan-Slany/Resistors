@@ -16,10 +16,15 @@ while True:
 	elif x.startswith("e"):
 		break
 
+	nums = []
 	try:
-		n1 = int(input("> "))
-		n2 = int(input("> "))
+		while True:
+			num = input("> ").strip()
+			if num == "":
+				break
+			nums.append(int(num))
+
 	except Exception as e:
 		print(f"Chyba: nebud dement\n\t{e}")
 
-	print(func([n1, n2]))
+	print(func(nums))
