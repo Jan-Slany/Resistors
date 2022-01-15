@@ -1,11 +1,8 @@
 def serial(number1, number2):
-	z = number1+number2
-	print(z)
+	return number1+number2
 
 def parallel(number1, number2):
-	z = 1 / (1 / number1 + 1 / number2)
-	z = round(z, 2)
-	print(z)
+	return round(1 / (1 / number1 + 1 / number2))
 
 prompt = "Zadej cislo\n> "
 
@@ -19,8 +16,8 @@ while True:
 		print(f"Chyba: nebud dement\n\t{e}")
 
 	if x.startswith("s"):
-		serial(n1, n2)
+		print(serial(n1, n2))
 	elif x.startswith("p`"):
-			parallel(n1, n2)
+		print(parallel(n1, n2))
 	elif x.startswith("e"):
 		break
