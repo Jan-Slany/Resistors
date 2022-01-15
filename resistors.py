@@ -9,17 +9,21 @@ def parallel(number1, number2):
 
 while True:
 
-	x = input()
+	x = input("Paralelne/seriove [p/s]\n> ").lower()
 	
-	if x.startswith("s"):
-		s1 = int(input())
-		s2 = int(input())
-		serial(s1, s2)
+	try:
+		if x.startswith("s"):
+			s1 = int(input())
+			s2 = int(input())
+			serial(s1, s2)
 
-	elif x.startswith("p"):
-		p1 = int(input())
-		p2 = int(input())
-		parallel(p1, p2)
+		elif x.startswith("p"):
+			p1 = int(input())
+			p2 = int(input())
+			parallel(p1, p2)
 
-	elif x.startswith("exit"):
+	except Exception as e:
+		print(f"Chyba: nebud dement\n\t{e}")
+	
+	if x.startswith("exit"):
 		break
