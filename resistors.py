@@ -1,5 +1,3 @@
-x = input()
-
 def serial(number1, number2):
 	z = number1+number2
 	print(z)
@@ -11,6 +9,8 @@ def parallel(number1, number2):
 
 while True:
 
+	x = input()
+	
 	if x.startswith("s"):
 		s1 = int(input())
 		s2 = int(input())
