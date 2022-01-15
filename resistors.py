@@ -10,8 +10,8 @@ while True:
 
 	x = input("Paralelne/seriove [p/s], exit pro ukonceni [e]\n> ").lower()
 	try:
-		n1 = int(input())
-		n2 = int(input())
+		n1 = int(input("> "))
+		n2 = int(input("> "))
 	except Exception as e:
 		print(f"Chyba: nebud dement\n\t{e}")
 
