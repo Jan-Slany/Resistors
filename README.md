@@ -1,9 +1,9 @@
-# Počítání odporu resistorů
+# Počítání odporu rezistorů
 
-Kód vypočítává odpor resistorů paralelních či sériovích dle výběru uživatele.
+Kód vypočítává odpor rezistorů paralelních či sériovích dle výběru uživatele.
 
 Chystá se vylepšení některých funkcí: 
-- přidání více resistorů do výpočtu
+- přidání více rezistorů do výpočtu
 - zpříjemnění uživatelského zážitku
 
 Doporučuji prodávat prvákům za cenu 150,-
