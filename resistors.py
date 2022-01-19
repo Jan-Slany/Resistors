@@ -1,11 +1,11 @@
-'''Funkce pro výpočet sériového obvodu'''
 def serial(number1, number2):
+    '''Funkce pro výpočet sériového obvodu'''
     z = number1+number2
     print(z)
     print("")
 
-'''Funkce pro výpočet paralelního obvodu'''
 def parallel(number1, number2):
+    '''Funkce pro výpočet paralelního obvodu'''
     z = 1 / (1 / number1 + 1 / number2)
     z = round(z, 2)
     print(z)
