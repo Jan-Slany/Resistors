@@ -2,8 +2,8 @@
 
 Kód vypočítává odpor rezistorů paralelních či sériovích dle výběru uživatele.
 
-Chystá se vylepšení některých funkcí: 
-- přidání více rezistorů do výpočtu
-- zpříjemnění uživatelského zážitku
+**Nově**
+- výpočet více rezistorů
+- zlepšené uživatelské prostředí
 
-Doporučuji prodávat prvákům za cenu 300,-
+Doporučuji prodávat prvákům za cenu 50,-
