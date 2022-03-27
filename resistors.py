@@ -1,41 +1,53 @@
-def serial(number1, number2):
-    '''Funkce pro výpočet sériového obvodu'''
-    z = number1+number2
-    print(z)
-    print("")
-
-def parallel(number1, number2):
-    '''Funkce pro výpočet paralelního obvodu'''
-    z = 1 / (1 / number1 + 1 / number2)
-    z = round(z, 2)
-    print(z)
-    print("")
-
 while True:
 
-    x = input("Jaký typ obvodu chceš vypočítat sériový/paralelní [s/p] pro ukončení napiš [e]\n> ").lower()
+    typ_zapojeni = input("Jaký typ obvodu chceš vypočítat sériový/paralelní [s/p]: ").lower()
 
-    if x.startswith("s"):
-        try:
-            s1 = int(input(">"))
-            s2 = int(input(">"))
-            print("――――――")
-            serial(s1, s2)
+    '''Funkce pro výpočet sériového obvodu'''
+    if typ_zapojeni.startswith("s"):
+
+        numbers = []
+        serie = 0
+
+        try:  
+            while True:
+                number = input(">").strip()
+                if number == "":
+                    serie += sum(numbers)
+                    print("")
+                    print("sérioví = {}".format(round(serie, 2)))
+                    print("")
+                    break
+                numbers.append(int(number))
+
         except Exception as e:
             print("---Error---")
             print(e)
             print("")
 
-    elif x.startswith("p"):
+    '''Funkce pro výpočet paralelního obvodu'''
+    if typ_zapojeni.startswith("p"):
+
+        numbers = []
+
         try:
-            p1 = int(input(">"))
-            p2 = int(input(">"))
-            print("――――――")
-            parallel(p1, p2)
+            while True:
+                number = input(">").strip()
+                if number == "":
+                    paralela = round(1/sum([1/i for i in numbers]), 2)  
+                    print("")  
+                    print("paralelní = {}".format(paralela))
+                    print("") 
+                    break
+                numbers.append(int(number))
+
         except Exception as e:
             print("---Error---")
             print(e)
             print("")
 
-    elif x.startswith("e"):
+    again = input("Chceš ještě počítat? ").lower()
+
+    if again != "ano":
         break
+    else:
+        pass
